@@ -18,4 +18,12 @@ resource "azurerm_kubernetes_cluster" "aks" {
   identity {
     type = "SystemAssigned"
   }
+
+  # prevents vnet ip overlap
+  network_profile {
+    network_plugin = "kubenet"
+    service_cidr   = "192.168.0.0/16"
+    dns_service_ip = "192.168.0.10"
+    pod_cidr       = "172.16.0.0/16"
+  }
 }
