@@ -1,0 +1,7 @@
+---
+- name: apply base config and very usefull motd
+  hosts: all
+  become: yes
+  roles:
+    - core
+    - motd

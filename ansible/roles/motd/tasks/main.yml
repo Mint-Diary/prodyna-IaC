@@ -1,0 +1,14 @@
+---
+- name: ensure update-motd.d directory exists
+  file:
+    path: /etc/update-motd.d
+    state: directory
+    mode: '0755'
+
+- name: Deploy custom PRODYNA motd script
+  template:
+    src: 99-prodyna.sh.j2
+    dest: /etc/update-motd.d/99-prodyna
+    mode: '0755'
+    owner: root
+    group: root
