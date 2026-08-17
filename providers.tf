@@ -8,7 +8,7 @@ terraform {
   }
   backend "azurerm" {
     resource_group_name  = "RG-Demid-Krom"
-    storage_account_name = "tfstatedemid_1786807817376"
+    storage_account_name = "tfstatedemid"
     container_name       = "tfstate"
     key                  = "prod.terraform.tfstate"
   }
