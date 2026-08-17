@@ -100,10 +100,6 @@ kubectl get nodes
 ```
 ## Conceptual Architecture & Operations
 
-To demonstrate a comprehensive understanding of both Workload Management (DevOps) and Infrastructure Automation (Cloud Engineering), the following concepts outline how this baseline architecture would be operated and scaled in a production scenario.
-
-## Conceptual Architecture & Operations
-
 To demonstrate a comprehensive understanding of Workload Management within the deployed infrastructure, the following concepts outline how this baseline architecture handles application deployments and secret management.
 
 ### DevOps Engineer: Workload Deployment & Secret Management
