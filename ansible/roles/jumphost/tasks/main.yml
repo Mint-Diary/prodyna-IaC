@@ -1,0 +1,19 @@
+---
+- name: Install prerequisites
+  apt:
+    name:
+      - curl
+      - unzip
+      - jq
+      - apt-transport-https
+    state: present
+
+- name: Install Azure CLI
+  shell: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+  args:
+    creates: /usr/bin/az
+
+- name: Install kubectl (via snap)
+  command: snap install kubectl --classic
+  args:
+    creates: /snap/bin/kubectl

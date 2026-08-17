@@ -5,3 +5,4 @@
   roles:
     - core
     - motd
+    - jumphost
