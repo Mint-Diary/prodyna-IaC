@@ -9,20 +9,21 @@ The project is structured to strictly separate infrastructure provisioning from 
 .
 ├── ansible/
 │   ├── roles/
-│   │   ├── core/           # Base system configuration (updates, timezone)
-│   │   ├── jumphost/       # Administrative tool installations (az cli, kubectl)
-│   │   └── motd/           # Custom login banner deployment (99-prodyna.sh.j2)
-│   └── site.yml            # Master playbook orchestrating all roles
+│   │   ├── core/                   # Base system configuration (updates, timezone)
+│   │   ├── jumphost/               # Administrative tool installations (az cli, kubectl)
+│   │   └── motd/                   # Custom login banner deployment (99-prodyna.sh.j2)
+│   └── site.yml                    # Master playbook orchestrating all roles
 ├── modules/
-│   ├── aks/                # Azure Kubernetes Service provisioning
-│   ├── jumphost/           # Linux VM, public IP, and network interface
-│   ├── network/            # Virtual Network, Subnets, and NSG rules
-│   ├── security/           # Key Vault and associated Private Endpoints
-│   └── storage/            # Storage Account and associated Private Endpoints
-├── main.tf                 # Root module invoking the infrastructure components
-├── providers.tf            # Provider configuration (azurerm, local, tls)
-├── variables.tf            # Global variable definitions
-└── README.md               # Project documentation
+│   ├── aks/                        # Azure Kubernetes Service provisioning
+│   ├── jumphost/                   # Linux VM, public IP, and network interface
+│   ├── network/                    # Virtual Network, Subnets, and NSG rules
+│   ├── security/                   # Key Vault and associated Private Endpoints
+│   └── storage/                    # Storage Account and associated Private Endpoints
+├── main.tf                         # Root module invoking the infrastructure components
+├── providers.tf                    # Provider configuration (azurerm, local, tls)
+├── variables.tf                    # Global variable definitions
+├── specification_of_tasks.pdf      # the original task description
+└── README.md                       # Project documentation
 
 ```
 
