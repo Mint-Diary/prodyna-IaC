@@ -23,7 +23,7 @@ resource "azurerm_linux_virtual_machine" "jumphost" {
   name                = "vm-jumphost"
   resource_group_name = var.resource_group_name
   location            = var.location
-  size                = "Standard_B1s"
+  size                = "Standard_B2s_v2"
   admin_username      = "adminuser"
 
   network_interface_ids = [
